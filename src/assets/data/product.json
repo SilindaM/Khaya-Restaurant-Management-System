@@ -1,0 +1,8 @@
+[
+    {"productId":1,"description":"nice","price":20,"productImg":"assets/images/egg-muffin.jpg","CategoryId":4,"productName":"Burger","quantity":100},
+    {"productId":2,"description":"Mawotwana","price":30,"productImg":"assets/images/burger.jpg","CategoryId":4,"productName":"Mancondo","quantity":1050},
+    {"productId":3,"description":"Kasi burger","price":20,"productImg":"assets/images/veggies.jpg","CategoryId":4,"productName":"Quater","quantity":10},
+    {"productId":4,"description":"Kwere-Kwere","price":220,"productImg":"assets/images/peperon.jpg","CategoryId":4,"productName":"Shisa-Nyama","quantity":1060},
+    {"productId":5,"description":"Mathumbu enkomo","price":70,"productImg":"assets/images/spgheti.jpg","CategoryId":4,"productName":"Mathumbu","quantity":1500},
+    {"productId":6,"description":"Romans","price":80,"productImg":"assets/images/pizzafun.jpg","CategoryId":4,"productName":"Pizza","quantity":1600}
+]
