@@ -1,0 +1,14 @@
+.card-img-top{
+    height: 30vh;
+    padding:10px;
+}
+.list-group-item{
+    border: 0;
+    list-style: none;
+}
+.prene{
+    margin-top: 1%;
+}
+.edilete{
+    margin-bottom: 5%;
+}
