@@ -9,9 +9,13 @@ import { HttpClient } from "@angular/common/http";
 export class ProductsService {
 
  public dummydata="assets/data/product.json";
+ public singleProduct:Products;
   constructor(private http:HttpClient) { }
 
-getProducts():Observable<Products>{
+getProducts():Observable <Products>{
      return this.http.get<Products>(this.dummydata);
      }
-  }
+viewProductDetails(productId){
+  return this.http.get<Products>(this.dummydata);
+    }
+}
