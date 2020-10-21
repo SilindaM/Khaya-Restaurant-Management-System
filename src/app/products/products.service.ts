@@ -15,7 +15,7 @@ export class ProductsService {
 getProducts():Observable <Products>{
      return this.http.get<Products>(this.dummydata);
      }
-viewProductDetails(productId){
-  return this.http.get<Products>(this.dummydata);
+viewProductDetails(productId):Observable<Products>{
+  return this.http.get<Products>(this.dummydata+productId);
     }
 }
