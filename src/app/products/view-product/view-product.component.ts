@@ -18,12 +18,6 @@ export class ViewProductComponent implements OnInit {
   ngOnInit(): void {
    this.productservice.getProducts().subscribe(data=>{
      this.producta=data;
-     
-     const id=this.router.snapshot.paramMap.get('productId');
-     this.productservice.viewProductDetails(id).subscribe(data=>{
-       console.log(data);
-     })
-
    }) 
   }   
 }

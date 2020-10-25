@@ -8,13 +8,15 @@ import { UpdateProductComponent } from './update-product/update-product.componen
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { HomeproductsComponent } from './homeproducts/homeproducts.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [AddProductComponent, ViewProductComponent, UpdateProductComponent, DeleteProductComponent, HomeproductsComponent, ProductdetailsComponent],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    ReactiveFormsModule
   ],
   exports :[AddProductComponent, ViewProductComponent, UpdateProductComponent, DeleteProductComponent,ProductdetailsComponent]
 })

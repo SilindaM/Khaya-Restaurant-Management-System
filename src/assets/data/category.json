@@ -1,0 +1,10 @@
+[
+    {"categoryName":"BreakFast","categoryId":1},
+    {"categoryName":"Lunch","categoryId":2},
+    {"categoryName":"Super","categoryId":3},
+    {"categoryName":"Beverage","categoryId":4},
+    {"categoryName":"Desert","categoryId":5},
+    {"categoryName":"Salads","categoryId":6},
+    {"categoryName":"Starter","categoryId":7},
+    {"categoryName":"FastFood","categoryId":8}
+]
