@@ -1,6 +1,6 @@
 
-    <div class="row text-center container">
-        <div  *ngFor="let product of producta" class="col-lg-4 col-md-4 mb-4">
+    <div class="row text-center ml-4 mr-4 ">
+        <div  *ngFor="let product of producta" class="col-lg-3 mt-4  col-md-4 mb-4">
           <div class="card ">
             <img class="card-img-top" src="assets/images/{{product.productImg}}.jpg" alt="">
             <div class="card-body">
@@ -22,12 +22,6 @@
                                     Instock
                                    </div>
                               </div>
-                             
-                             <div class="col-12 mt-2">
-                                <div class="btn btn-primary btn-block" routerLink="/productdetails">
-                                 VIEW DETAILS
-                                </div>
-                             </div>
                 </div>
             </div>
           </div>

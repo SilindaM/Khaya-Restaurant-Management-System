@@ -8,7 +8,7 @@ import { ProductsModule } from "./products/products.module";
 import { HttpClientModule } from '@angular/common/http';
 import { TablesModule } from './tables/tables.module';
 import { MainpageModule } from './mainpage/mainpage.module';
-
+import { CustomersModule } from './customers/customers.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { MainpageModule } from './mainpage/mainpage.module';
     ProductsModule,
     HttpClientModule,
     TablesModule,
-    MainpageModule
+    MainpageModule,
+    CustomersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
