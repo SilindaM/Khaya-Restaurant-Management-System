@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Category } from '../category';
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'app-add-product',
@@ -9,8 +11,10 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class AddProductComponent implements OnInit {
 
   isSubmitted=false;
+  selected:File;
+  categories:Category;
   productRegistration:FormGroup
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder,private service:ProductsService) { }
 
   AddNewProductForm(){
     this.productRegistration=this.fb.group({
@@ -41,6 +45,11 @@ export class AddProductComponent implements OnInit {
   get CategoryValidator(){
     return  this.productRegistration.get('pCategory') as FormControl;
   }
+  GetCategory(){
+    this.service.getCategory().subscribe(data=>{
+      this.categories=data;
+    })
+  }
   
   onSubmit(){
     this.isSubmitted=true;
@@ -53,6 +62,10 @@ export class AddProductComponent implements OnInit {
   }
   ngOnInit(): void {
     this.AddNewProductForm();
+    this.GetCategory();
+  }
+  onImage(event){
+    console.log();
   }
   
 }

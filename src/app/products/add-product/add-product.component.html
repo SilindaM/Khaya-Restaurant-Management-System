@@ -12,26 +12,29 @@
                   </div>
                   <div class="form-group col-md-6">
                     <input type="text" class="form-control" formControlName="pPrice" placeholder="PRODUCT PRICE">
-                  <span class="errors"  *ngIf="!PriceValidator.valid && NameValidator.touched">ENTER PRODUCT PRICE></span>
+                  <span class="errors"  *ngIf="!PriceValidator.valid && NameValidator.touched">ENTER PRODUCT PRICE</span>
                   </div>
                   <div class="form-group col-md-6">
                     <input type="text" class="form-control" formControlName="pQuantity" placeholder="PRODUCT QUANTITY">
-                    <span class="errors"  *ngIf="QuantityValidator.valid && QuantityValidator.touched">ENTER PRODUCT QUANTITY</span>
+                    <span class="errors"  *ngIf="!QuantityValidator.valid && QuantityValidator.touched">ENTER PRODUCT QUANTITY</span>
                   </div>
                   <div class="form-group col-md-6">
                     <select id="inputState" class="form-control">
-                      <option disabled selected>CHOOSE PRODUCT CATEGORY</option>
-                      <option>
-                      </option>
-                       </select>
+                      <option [ngValue]="null" disabled selected>CHOOSE PRODUCT CATEGORY</option>
+                      <option *ngFor="let cat of categories" [ngValue]="categoryId">{{cat.categoryName}}</option>
+                    </select>
                   </div>
-                  <div class="custom-file col-md-12">
-                    <input type="file" class="custom-file-input" formControlName="pImage" required>
+
+
+                  <div class="custom-file col-md-6">
+                    <input type="file" (change)="onImage($event)"  accept="image/*" formControlName="pImage" required>
                     <label class="custom-file-label text-center" for="validatedCustomFile">UPLOAD PRODUCT IMAGE</label>
                     <span class="errors"  *ngIf="!ImageValidator.valid && ImageValidator.touched">ENTER PRODUCT IMAGE</span>
                     <div class="invalid-feedback">Example invalid custom file feedback</div>
                   </div>
-                  <div class="form-group col-md-12 mt-2">
+
+
+                  <div class="form-group col-md-6 mt-2">
                       <textarea class="form-control text-center"  formControlName="pDescription" placeholder="PRODUCT DESCRIPTION"></textarea>
                       <span class="errors"  *ngIf="!DescriptionValidator.valid && DescriptionValidator.touched">ENTER PRODUCT DESCRIPTION</span>
                     </div>
@@ -40,4 +43,4 @@
               </form>
         </div>
     </div>
-</div>
+</div>  
