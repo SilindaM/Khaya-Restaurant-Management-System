@@ -44,7 +44,9 @@
                   <div class="col-sm-6">
                     <input type="password" class="form-control" formControlName="Cconfirm" placeholder="Repeat Password">
                     <span class="errors" *ngIf="!ConfirmPasswordValidator.valid && ConfirmPasswordValidator.touched">Confirm Password</span>
-                </div>
+                    <span class="errors" *ngIf="RegisterUser.hasError('notSame') &&  ConfirmPasswordValidator.valid "> Password Not Matching</span>
+               
+                  </div>
                 </div>
                 <a href="login.html" class="btn btn-primary btn-user btn-block">
                   Register Account
@@ -55,7 +57,7 @@
                 <a class="small" href="forgot-password.html">Forgot Password?</a>
               </div>
               <div class="text-center">
-                <a class="small" href="login.html">Already have an account? Login!</a>
+                <a class="small" [routerLink]="['/login']" routerLinkActive="router-link-active" >Already have an account? Login!</a>
               </div>
             </div>
           </div>
