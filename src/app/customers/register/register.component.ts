@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {  FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {  FormBuilder, FormControl, FormGroup, Validators,Validator } from '@angular/forms';
+
 
 @Component({
   selector: 'app-register',
@@ -16,11 +17,16 @@ export class RegisterComponent implements OnInit {
     this.RegisterUser=this.fb.group({
       CfirstName:['',Validators.required],
       Csurname:['',Validators.required],
-      Cemail:['',Validators.required,Validators.email],
+      Cemail:['',[Validators.required,Validators.email]],
       Ccellphone:['',Validators.required],
       Cpassword:['',Validators.required],
       Cconfirm:['',Validators.required]
-    })
+    },{validator:this.CheckPasswords})
+  }
+    CheckPasswords(group:FormGroup):Validators{
+      let pass=group.get('Cpassword').value;
+      let confi=group.get('Cconfirm').value;
+      return pass===confi ? null :{notSame:true};
     }
     
     ngOnInit(): void {
@@ -44,6 +50,10 @@ export class RegisterComponent implements OnInit {
     get ConfirmPasswordValidator(){
       return this.RegisterUser.get('Cconfirm') as FormControl;
     }
-    onSubmit(){}
+    onSubmit(){
+      if(this.RegisterUser.valid){
+        console.log('h8');
+      }
+    }
 
 }
