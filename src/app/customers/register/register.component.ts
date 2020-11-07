@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  FormBuilder, FormControl, FormGroup, Validators,Validator } from '@angular/forms';
+import { Customer } from '../customer';
 
 
 @Component({
@@ -10,6 +11,7 @@ import {  FormBuilder, FormControl, FormGroup, Validators,Validator } from '@ang
 export class RegisterComponent implements OnInit {
 
   RegisterUser:FormGroup;
+  customera:Customer
   constructor(private  fb:FormBuilder) { }
 
   
@@ -55,5 +57,15 @@ export class RegisterComponent implements OnInit {
         console.log('h8');
       }
     }
+    Register():Customer{
+      return this.customera={
+        customerName:this.NameValidator.value,
+        customerSurname:this.SurnameValidator.value,
+        customerCellphone:this.CellphoneValidator.value,
+        customerEmail:this.EmailValidator.value,
+        customerPassword:this.PasswordValidator.value
+        
+      }
+      }
 
 }

@@ -51,21 +51,15 @@ export class AddProductComponent implements OnInit {
     })
   }
   
+  ResetForm(){
+    this.productRegistration.reset();
+  }
   onSubmit(){
-    this.isSubmitted=true;
-    if(!this.productRegistration.valid){
-      return  false;
-    }
-    else{
-      alert(JSON.stringify(this.productRegistration.value))
-    }
+    this.service.AddProduct(this.productRegistration.value);
   }
   ngOnInit(): void {
     this.AddNewProductForm();
     this.GetCategory();
-  }
-  onImage(event){
-    console.log();
   }
   
 }

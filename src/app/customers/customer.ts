@@ -1,7 +1,7 @@
 export interface Customer {
-    customerId:number;
     customerName:string;
-    customerCellphone:number;
+    customerSurname:string;
+    customerCellphone:string;
     customerEmail:string;
     customerPassword:string
 }
