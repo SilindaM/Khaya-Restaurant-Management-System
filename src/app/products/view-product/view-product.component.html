@@ -13,28 +13,29 @@
 
       <div  *ngFor="let product of producta" class="col-lg-4 col-md-4 mb-4">
         <div class="card h-70">
-          <img class="card-img-top" src="assets/images/{{product.productImg}}.jpg" alt="">
-          <div class="card-body">
+          <img class="card-img-top" src="assets/images/{{product.pImage}}.jpg" alt="">
+          <div class="card-body bg-primary">
               <div class="row">
                             <div class="col-md-6 col-lg-6 col-sm-12">
-                                 {{product.productName}}
+                                 {{product.pName}}
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-12">
-                                {{product.price}}
+                              R  {{product.pPrice}}
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-12">
-                            Total : {{product.quantity}}
+                            Total : {{product.pQuantity}}
                             </div>
                             <!--instock-->
                             <div class="col-md-6 col-lg-6 col-sm-2">
                                 Instock
                             </div>
+                            <div class="col-md-12 col-lg-12 col-sm-2">
+                              {{product.pDescription}}
+                          </div>
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                              <div class="btn btn-danger btn-block" (click)="deleteProduct(product.id)">DELETE</div>
+                         </div>
                            
-                           <div class="col-12 mt-2">
-                              <div class="btn btn-primary btn-block" routerLink="/productdetails">
-                               VIEW DETAILS
-                              </div>
-                           </div>
               </div>
           </div>
         </div>

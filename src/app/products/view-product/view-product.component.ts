@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Products } from '../product';
 import { ProductdetailsComponent } from '../productdetails/productdetails.component';
 import { ProductsService } from '../products.service';
@@ -12,12 +12,21 @@ import { ProductsService } from '../products.service';
 export class ViewProductComponent implements OnInit {
 
    producta:Products;
-   productId
-  constructor(private productservice:ProductsService,private router:ActivatedRoute) { }
+   productId:number;
+  constructor(private productservice:ProductsService,private actRoute:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
-   this.productservice.getProducts().subscribe(data=>{
-     this.producta=data;
-   }) 
+    this.getAllProducts();
+  
   }   
+  getAllProducts(){
+    return this.productservice.getProducts().subscribe(data=>{
+      this.producta=data;
+    })
+  }
+  deleteProduct(id:number){
+      this.productservice.DeleteProduct(id).subscribe((data:Products)=>{
+        this.getAllProducts();
+      })
+  }
 }

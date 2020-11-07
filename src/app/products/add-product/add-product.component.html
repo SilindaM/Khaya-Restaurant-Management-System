@@ -19,17 +19,14 @@
                     <span class="errors"  *ngIf="!QuantityValidator.valid && QuantityValidator.touched">ENTER PRODUCT QUANTITY</span>
                   </div>
                   <div class="form-group col-md-6">
-                    <select id="inputState" class="form-control">
-                      <option [ngValue]="null" disabled selected>CHOOSE PRODUCT CATEGORY</option>
-                      <option *ngFor="let cat of categories" [ngValue]="categoryId">{{cat.categoryName}}</option>
-                    </select>
+                    <input type="text" class="form-control" formControlName="pCategory" placeholder="PRODUCT CATEGORY">
+                    <span class="errors"  *ngIf="!CategoryValidator.valid && CategoryValidator.touched">ENTER PRODUCT CATEGORY</span>
                   </div>
 
                   <div class="form-group col-md-6 ">
                     <input class="file-input block"  formControlName="pImage" type="file">
                     <span class="errors" *ngIf="!ImageValidator.valid && ImageValidator.touched">IMAGE REQUIRED</span>
                   </div>
-
 
                   <div class="form-group col-md-6 mt-2">
                       <textarea class="form-control text-center"  formControlName="pDescription" placeholder="PRODUCT DESCRIPTION"></textarea>
