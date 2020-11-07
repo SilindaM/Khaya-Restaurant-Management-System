@@ -1,13 +1,22 @@
 {
   "products": [
     {
-      "id": 1,
-      "productName": "json-server",
-      "productCategory": "typicode",
-      "description":"",
-      "price":"",
-      "productImg":"",
-      "quantity":""
+      "pName": "MDU",
+      "pPrice": "343",
+      "pQuantity": "343",
+      "pImage": "colonel",
+      "pDescription": "DSDSD",
+      "pCategory": "DDSD",
+      "id": 1
+    },
+    {
+      "pName": "MN",
+      "pPrice": "34",
+      "pQuantity": "1000",
+      "pImage": "ngculu",
+      "pDescription": "DSDDS",
+      "pCategory": "TRTF",
+      "id": 2
     }
   ]
 }
