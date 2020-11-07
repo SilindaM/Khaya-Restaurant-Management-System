@@ -1,19 +1,13 @@
 {
-  "posts": [
+  "products": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "productName": "json-server",
+      "productCategory": "typicode",
+      "description":"",
+      "price":"",
+      "productImg":"",
+      "quantity":""
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
