@@ -5,15 +5,16 @@ import { CustomersRoutingModule } from './customers-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import {  ReactiveFormsModule } from '@angular/forms';
+import { CustomerlistComponent } from './customerlist/customerlist.component';
 
 
 @NgModule({
-  declarations: [RegisterComponent, LoginComponent],
+  declarations: [RegisterComponent, LoginComponent, CustomerlistComponent],
   imports: [
     CommonModule,
     CustomersRoutingModule,
     ReactiveFormsModule
   ],
-  exports:[RegisterComponent,LoginComponent]
+  exports:[RegisterComponent,LoginComponent,CustomerlistComponent]
 })
 export class CustomersModule { }

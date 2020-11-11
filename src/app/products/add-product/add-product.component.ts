@@ -47,6 +47,7 @@ export class AddProductComponent implements OnInit {
   CreateProduct(product:Products){
       return  this.service.AddProduct(product).subscribe(data=>{
         console.log(this.productRegistration.value);
+        alert("PRODUCT SUCCESSFULLY ADDED");
       })
   }
   ResetForm(){

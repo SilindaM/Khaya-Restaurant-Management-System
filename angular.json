@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "khaya"
+    }
+  },
+  "defaultProject": "khaya",
+  "cli": {
+    "analytics": "4685a91c-0f4c-49c0-8089-3e1309f63c61"
+  }
 }

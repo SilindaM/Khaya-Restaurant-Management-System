@@ -1,11 +1,11 @@
 {
   "products": [
     {
-      "pName": "MDU",
+      "pName": "DRUM STICK",
       "pPrice": "343",
       "pQuantity": "343",
-      "pImage": "colonel",
-      "pDescription": "DSDSD",
+      "pImage": "ngculu",
+      "pDescription": "CHICKEN DRUM STICK",
       "pCategory": "DDSD",
       "id": 1
     },
@@ -13,10 +13,91 @@
       "pName": "MN",
       "pPrice": "34",
       "pQuantity": "1000",
-      "pImage": "ngculu",
+      "pImage": "colonel",
       "pDescription": "DSDDS",
       "pCategory": "TRTF",
       "id": 2
+    },
+    {
+      "pName": "COLD DRINK",
+      "pPrice": "12.50",
+      "pQuantity": "20",
+      "pImage": "1.5lcoke",
+      "pDescription": "COCA COLLA COLDRINK BEST TO DRINK WHEN IS HOT",
+      "pCategory": "DRINKS",
+      "id": 3
+    },
+    {
+      "pName": "ICE CREAM",
+      "pPrice": "5.20",
+      "pQuantity": "45",
+      "pImage": "icecream",
+      "pDescription": "ICE CREAM GOOD FOR CHILDREN",
+      "pCategory": "SNACK",
+      "id": 4
+    },
+    {
+      "pName": "WATER ",
+      "pPrice": "10.20",
+      "pQuantity": "20",
+      "pImage": "water",
+      "pDescription": "NATURAL WATER SUITED FOR EVERYONE",
+      "pCategory": "DRINKS",
+      "id": 5
+    },
+    {
+      "pName": "JUICE",
+      "pPrice": "14",
+      "pQuantity": "20",
+      "pImage": "juice",
+      "pDescription": "FLAVOURED JUICE",
+      "pCategory": "DRINKS",
+      "id": 6
+    },
+    {
+      "pName": "SALADS",
+      "pPrice": "11",
+      "pQuantity": null,
+      "pImage": "saldds",
+      "pDescription": "GREEN SALAD",
+      "pCategory": "SALADS",
+      "id": 7
+    },
+    {
+      "pName": "PIZZA",
+      "pPrice": "70",
+      "pQuantity": "20",
+      "pImage": "veggies",
+      "pDescription": "SOUTH AFRICAN PIZZZ",
+      "pCategory": "PIZZA",
+      "id": 8
+    },
+    {
+      "pName": "",
+      "pPrice": "",
+      "pQuantity": "",
+      "pImage": "",
+      "pDescription": "",
+      "pCategory": "",
+      "id": 9
+    },
+    {
+      "pName": "MBILA",
+      "pPrice": "12",
+      "pQuantity": "20",
+      "pImage": "C:\\fakepath\\mash.jpg",
+      "pDescription": "AFRICAN MAIZE, EATEN IN SOUTHERN AFRICA AS STABLE FOOD",
+      "pCategory": "VEGETABLES",
+      "id": 10
+    },
+    {
+      "pName": "MBILA",
+      "pPrice": "12",
+      "pQuantity": "12",
+      "pImage": "C:\\fakepath\\mash.jpg",
+      "pDescription": "AFRICAN MAIZA",
+      "pCategory": "VEGE",
+      "id": 11
     }
   ]
 }

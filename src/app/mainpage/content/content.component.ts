@@ -22,4 +22,7 @@ producta:Products;
       this.producta=data;
     })
   }
+  addToCart(){
+    alert("added");
+  }
 }
